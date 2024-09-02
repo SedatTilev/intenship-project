@@ -20,8 +20,9 @@ class MainPage(Page):
     def filter_status(self):
         select_element = self.driver.find_element(*self.SALE_STATUS_BTN)
         select = Select(select_element)
+        sleep(5)
         select.select_by_visible_text("Out of stock")
-        sleep(2)
+        sleep(5)
 
     def verify_products_contains_tag(self):
         tags = self.driver.find_elements(*self.OUT_OF_STATUS_TAG)
